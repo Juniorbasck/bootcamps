@@ -33,3 +33,12 @@ valor //= 500
 valor *= 500
 
 print(valor)
+
+
+#operadores logicos
+
+# e = AND 
+# ou = OR
+# negação = NOT
+not 1000 > 500
+

@@ -22,3 +22,8 @@ elif idade == IDADE_ESPECIAL:
     print("pode fazer aulas praticas")
 else :
     print("não pode tirar a CNH")
+
+
+# if ternario:
+# Exemplo: 
+# status = "Sucesso" if saldo >= saque else "Falha"

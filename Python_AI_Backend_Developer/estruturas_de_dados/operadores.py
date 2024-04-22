@@ -42,3 +42,14 @@ print(valor)
 # negação = NOT
 not 1000 > 500
 
+
+#operadores de indentidade
+teste = "teste"
+saldo, limite  = 200, 200
+
+print(saldo is limite)
+
+#operadores de associacao
+# está = IN
+# não está = NOT IN
+# ele é case sensitive

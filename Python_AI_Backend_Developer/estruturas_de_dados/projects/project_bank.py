@@ -23,7 +23,11 @@ while True:
     
     if opcao == "s": 
         if SAQUE_DIARIO <= 3 and SALDO_CONTA > 0:
+            
             saque = int(int(input("Dite o valor a ser sacado: ")))
+            
+            if SALDO_CONTA > saque:
+                print("Vo")
             
             
         

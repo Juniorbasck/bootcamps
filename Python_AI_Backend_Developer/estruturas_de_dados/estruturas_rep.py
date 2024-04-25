@@ -26,4 +26,4 @@ while True:
     if numero == 10:
         break
 
-    print(numero);
+    print(numero)

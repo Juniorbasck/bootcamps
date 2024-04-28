@@ -18,23 +18,27 @@ while True:
     opcao = input(mensagem)
     
     if opcao == "d":
-        deposito = int(input("Digite o valor de deposito: "))
-        SALDO_CONTA = deposito + SALDO_CONTA    
-        ULTIMOS_DEPOSITOS.append(deposito)
+        deposito = float(input("Digite o valor de deposito: "))
+
+        if deposito > 0:
+            SALDO_CONTA += deposito     
+            ULTIMOS_DEPOSITOS.append(deposito)
+        else:
+            print("Voce só pode depositar valores positivos")
 
     elif opcao == "s": 
         if SAQUE_DIARIO <= 3 and SALDO_CONTA > 0:
             
-            saque = int(int(input("Dite o valor a ser sacado: ")))
+            saque = float(int(input("Dite o valor a ser sacado: ")))
             
             if SALDO_CONTA > saque:
                 SALDO_CONTA = SALDO_CONTA - saque
-                SALDO_CONTA = SALDO_CONTA + 1
-                ULTIMOS_DEPOSITOS.append(saque)
+                SAQUE_DIARIO = SAQUE_DIARIO + 1
+                ULTIMOS_SAQUES.append(saque)
                 print("Saque realizado")
             else:
                 print("você não tem saldo")
-        else:
+        else:   
             print("você n pode realizar saque")
     
     elif opcao == "e":
@@ -46,11 +50,19 @@ while True:
         print()
         print("Seus ultimos saques foram: ")
         print()
-        for ultimo_saque in ULTIMOS_SAQUES:
-            print(ultimo_saque)
-
+        for x in ULTIMOS_DEPOSITOS:
+            print(f"ultimo saques foram: {x}")
+        print()
+        print("-----------------------------")
+        print()
+        for x in ULTIMOS_SAQUES:
+            print(f"ultimo saques foram: {x}")
+            
     elif opcao == "q":
-        break; 
+        break;     
+
+    else:
+        print("digite a operaçãao desejada")
             
         
 print("programa finalizado!!")
